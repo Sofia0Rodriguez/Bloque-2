@@ -1,0 +1,17 @@
+calificacion1 = float(input("Ingrese la calificación 1: "))
+calificacion2 = float(input("Ingrese la calificación 2: "))
+calificacion3 = float(input("Ingrese la calificación 3: "))
+calificacion4 = float(input("Ingrese la calificación 4: "))
+calificacion5 = float(input("Ingrese la calificación 5: "))
+
+# Calculamos el promedio
+promedio = (calificacion1 + calificacion2 + calificacion3 + calificacion4 + calificacion5) / 5
+
+# Mostramos el resultado
+print(f"\nEl promedio de las calificaciones es: {promedio:.2f}")
+
+# Evaluamos si aprobó o reprobó
+if promedio >= 6:
+    print("¡Felicidades, has aprobado!")
+else:
+    print("Lo siento, no has aprobado.")
