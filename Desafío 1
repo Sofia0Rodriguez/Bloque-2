@@ -1,0 +1,21 @@
+# Definimos tres números
+a = 103
+b = 696
+c = 92
+
+# Encuentra el menor, el mediano y el mayor utilizando solo comparaciones
+if a < b and a < c:
+    if b < c:
+        print(a, b, c)  # a es el menor, luego b, luego c
+    else:
+        print(a, c, b)  # a es el menor, luego c, luego b
+elif b < a and b < c:
+    if a < c:
+        print(b, a, c)  # b es el menor, luego a, luego c
+    else:
+        print(b, c, a)  # b es el menor, luego c, luego a
+else:
+    if a < b:
+        print(c, a, b)  # c es el menor, luego a, luego b
+    else:
+        print(c, b, a)  # c es el menor, luego b, luego a
