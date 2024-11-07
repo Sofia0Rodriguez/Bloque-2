@@ -1,0 +1,11 @@
+# Pedimos al usuario que ingrese su peso
+peso = float(input("Ingrese su peso en kilogramos: "))
+
+# Pedimos al usuario que ingrese su altura
+altura = float(input("Ingrese su altura en metros: "))
+
+# Calculamos el IMC
+imc = peso / altura**2
+
+# Imprimimos el resultado
+print(f"Su Indice de Masa Corporal es {imc:.2f}.")
