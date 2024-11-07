@@ -1,0 +1,35 @@
+# Función para ingresar los detalles de un producto
+def ingresar_producto():
+    nombre = input("Ingrese el nombre del producto: ")
+    cantidad = int(input(f"Ingrese la cantidad de {nombre}: "))
+    precio = float(input(f"Ingrese el precio de {nombre}: "))
+    return nombre, cantidad, precio
+
+# Función para imprimir la factura
+def imprimir_factura(productos):
+    print("\n--- FACTURA ---")
+    print("{:<20} {:<10} {:<10} {:<10}".format("Producto", "Cantidad", "Precio", "Total"))
+    print("-" * 50)
+
+    total_factura = 0
+    for nombre, cantidad, precio in productos:
+        total_producto = cantidad * precio
+        total_factura += total_producto
+        print("{:<20} {:<10} {:<10.2f} {:<10.2f}".format(nombre, cantidad, precio, total_producto))
+
+    print("-" * 50)
+    print(f"{'Total factura':<40} {total_factura:<10.2f}")
+    print("-" * 50)
+
+# Lista para almacenar los productos
+productos = []
+
+# Solicitar los productos al usuario (3 productos en este ejemplo)
+num_productos = int(input("¿Cuántos productos desea ingresar? "))
+for i in range(num_productos):
+    print(f"\nProducto {i + 1}:")
+    producto = ingresar_producto()
+    productos.append(producto)
+
+# Imprimir la factura
+imprimir_factura(productos)
