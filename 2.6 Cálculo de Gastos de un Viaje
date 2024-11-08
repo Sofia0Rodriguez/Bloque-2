@@ -1,0 +1,13 @@
+# Definimos una lista con los conceptos de gastos
+conceptos_gastos = ['Transporte', 'Alojamiento', 'Alimentación', 'Actividades', 'Otros']
+
+# Inicializamos el total de gastos en 0
+total_gastos = 0
+
+# Iteramos sobre cada concepto de gasto y solicitamos el costo estimado al usuario
+for concepto in conceptos_gastos:
+    costo = float(input(f"Ingrese el costo estimado para {concepto}: "))
+    total_gastos += costo  # Sumamos el costo al total
+
+# Mostramos el total de gastos estimados
+print(f"El total de gastos estimados para el viaje es: {total_gastos}")
