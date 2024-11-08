@@ -1,0 +1,29 @@
+import random
+
+# Definimos el número de autos en la carrera
+num_autos = 3
+
+# Creamos una lista para almacenar la distancia de cada auto
+distancias = [0] * num_autos
+
+# Simulación de la carrera
+for segundo in range(10):
+    print(f"Segundo {segundo + 1}:")
+    for i in range(num_autos):
+        # Generamos una velocidad aleatoria entre 1 y 10 para cada auto
+        velocidad = random.randint(1, 10)
+        # Calculamos la distancia recorrida por cada auto en este segundo
+        distancias[i] += velocidad
+        print(f"  Auto {i + 1} avanza {velocidad} metros, distancia total: {distancias[i]} metros")
+
+# Determinamos la distancia máxima alcanzada
+distancia_maxima = max(distancias)
+
+# Identificamos al auto o autos ganadores
+ganadores = [i + 1 for i, distancia in enumerate(distancias) if distancia == distancia_maxima]
+
+# Imprimimos el resultado de la carrera
+if len(ganadores) == 1:
+    print(f"\nEl auto ganador es el Auto {ganadores[0]} con una distancia de {distancia_maxima} metros.")
+else:
+    print(f"\nHubo un empate entre los autos {', '.join(map(str, ganadores))} con una distancia de {distancia_maxima} metros.")
